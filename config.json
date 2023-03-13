@@ -1,0 +1,34 @@
+{
+  "source": ["input/**/*.json"],
+  "platforms": {
+    "css": {
+      "transformGroup": "css",
+      "buildPath": "build/css/",
+      "files": [{
+        "destination": "variables.css",
+        "format": "css/variables"
+      }]
+    },
+     "ts": {
+      "transformGroup": "js",
+      "files": [
+        {
+          "format": "javascript/es6",
+          "destination": "build/ts/colors.js"
+        },
+        {
+          "format": "typescript/es6-declarations",
+          "destination": "build/ts/colors.d.ts"
+        }
+      ]
+    },
+     "js": {
+      "transformGroup": "js",
+      "buildPath": "build/js/",
+      "files": [{
+        "destination": "tokens.js",
+        "format": "javascript/module-flat"
+      }]
+    }
+  }
+}
